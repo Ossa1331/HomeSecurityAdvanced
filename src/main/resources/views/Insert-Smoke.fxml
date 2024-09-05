@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.homesecurity.controller.InsertSmokeSensorController">
+   <GridPane prefHeight="600.0" prefWidth="900.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+      <fx:include source="Menu-Bar.fxml"/>
+      <Label text="Connect Smoke Sensor" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0"/>
+         </font>
+      </Label>
+      <Label text="Smoke Sensor Name: " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <Label text="Model:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <Label text="Manufacturer: " GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <Label text="Serial Number: " GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="smokeSensorNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="smokeSensorModelTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="smokeSensorManufacturerTextField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="smokeSensorSerialNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </TextField>
+      <Label text="Manufacturing Date: " GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <Label text="Location: " GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="5.0"/>
+         </GridPane.margin>
+      </Label>
+      <DatePicker fx:id="smokeSensorManufacturingDateDatePicker" prefHeight="25.0" prefWidth="371.0"
+                  GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </DatePicker>
+      <ComboBox fx:id="smokeSensorLocationComboBox" prefHeight="25.0" prefWidth="351.0" GridPane.columnIndex="1"
+                GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="50.0"/>
+         </GridPane.margin>
+      </ComboBox>
+      <Button mnemonicParsing="false" onAction="#saveNewSmokeSensor" text="Connect Smoke Sensor"
+              GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8"/>
+   </GridPane>
+</VBox>

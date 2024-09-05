@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homesecurity.controller.ChooseLocationController">
+   <children>
+      <Label layoutX="333.0" layoutY="52.0" prefHeight="35.0" prefWidth="246.0" text="Choose your Location">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="725.0" layoutY="528.0" mnemonicParsing="false" onAction="#chooseAddress" prefHeight="35.0" prefWidth="125.0" text="Choose" />
+      <Button layoutX="271.0" layoutY="528.0" mnemonicParsing="false" onAction="#newAddress" prefHeight="35.0" prefWidth="125.0" text="New Location" />
+      <Button layoutX="65.0" layoutY="528.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="35.0" prefWidth="125.0" text="Back" />
+      <TableView fx:id="addressTableView" layoutX="128.0" layoutY="136.0" prefHeight="347.0" prefWidth="669.0">
+        <columns>
+          <TableColumn fx:id="AddressStreetTableColumn" prefWidth="199.0" text="Street" />
+            <TableColumn fx:id="AddressCityTableColumn" prefWidth="218.0" text="City" />
+          <TableColumn fx:id="AddressHouseNumberTableColumn" prefWidth="122.0" text="House Number" />
+            <TableColumn fx:id="AddressPostalCodeTableColumn" prefWidth="129.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <Button layoutX="497.0" layoutY="528.0" mnemonicParsing="false" onAction="#deleteAddress" prefHeight="35.0" prefWidth="125.0" text="Delete" />
+      <Button layoutX="730.0" layoutY="98.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="24.0" prefWidth="67.0" text="Refresh" />
+   </children>
+</AnchorPane>

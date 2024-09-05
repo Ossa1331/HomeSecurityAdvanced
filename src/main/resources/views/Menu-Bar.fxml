@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homesecurity.controller.MenuBarController">
+    <MenuBar prefHeight="0.0" prefWidth="900.0">
+        <Menu mnemonicParsing="false" text="Device Control">
+            <MenuItem mnemonicParsing="false" onAction="#showAllDevicesScreen" text="Search All Devices" />
+         <MenuItem mnemonicParsing="false" onAction="#showLogInScreen" text="Log Out" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Connect">
+            <MenuItem mnemonicParsing="false" onAction="#showInsertCameraScreen" text="Camera" />
+            <MenuItem mnemonicParsing="false" onAction="#showMotionScreen" text="Motion Sensor" />
+            <MenuItem mnemonicParsing="false" onAction="#showCO2Screen" text="CO2 Sensor" />
+            <MenuItem mnemonicParsing="false" onAction="#showInsertGlassBreakScreen" text="Glass Break Sensor" />
+            <MenuItem mnemonicParsing="false" onAction="#showHeatScreen" text="Heat Sensor" />
+            <MenuItem mnemonicParsing="false" onAction="#showSmokeScreen" text="Smoke Sensor" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="View">
+            <MenuItem mnemonicParsing="false" onAction="#showChangeLogScreen" text="Change Log" />
+         <MenuItem mnemonicParsing="false" onAction="#showMeasureScreen" text="Measure Results" />
+         <MenuItem mnemonicParsing="false" onAction="#showEventScreen" text="Event Log" />
+        </Menu>
+    </MenuBar>
+
+</AnchorPane>
